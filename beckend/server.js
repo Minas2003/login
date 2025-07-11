@@ -8,7 +8,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const USERS_FILE = 'users.json';
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -71,7 +71,7 @@ app.post('/login', async (req, res) => {
   const match = await bcrypt.compare(password, user.password);
   if (!match) return res.send("Неверный пароль");
   req.session.user = user;
-  res.redirect('mimaro.vercel.app');
+  res.redirect('https://mimaro.vercel.app');
 });
 
 app.listen(PORT, () => {
