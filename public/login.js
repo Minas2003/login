@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = Object.fromEntries(formData.entries());
   
       try {
-        const res = await fetch('login-u8as.onrender.com', {
+        const res = await fetch('https://login-u8as.onrender.com/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
