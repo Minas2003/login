@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Подтвердите Email</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="bg.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Подтверждение</h2>
+    <form action="/verify" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="code" placeholder="Код из email" required>
+      <input type="password" name="password" placeholder="Пароль" required>
+      <button type="submit">Подтвердить</button>
+    </form>
+  </div>
+</body>
+</html>
