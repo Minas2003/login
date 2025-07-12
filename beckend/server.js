@@ -48,7 +48,8 @@ app.post('/register', async (req, res) => {
     subject: "Код подтверждения",
     text: "Ваш код: " + code
   });
-  res.sendFile('verify.html', { root: path.join(__dirname, 'public')}); 
+  res.sendFile(path.resolve(__dirname, 'public', 'verify.html'));
+
 });
 
 app.post('/verify', async (req, res) => {
